@@ -12,11 +12,25 @@
     h1 {
       color: #333;
     }
+
+    #fortune {
+      margin-top: 20px;
+    }
+
+    #generateButton {
+      padding: 10px 20px;
+      background-color: #73e2cd;
+      border: none;
+      color: #FFFFFF;
+      border-radius: 3px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <h1>The Fortune Teller</h1>
   <div id="fortune"></div>
+  <button id="generateButton" onclick="generateFortune()">Generate Fortune</button>
 
   <script>
     function tellFortune(numChildren, partnerName, location, jobTitle) {
@@ -24,13 +38,16 @@
   return fortune;
 }
 
-var fortuneElement = document.getElementById("fortune");
+function generateFortune() {
+  var fortuneElement = document.getElementById("fortune");
 
-var fortune1 = tellFortune(2, "Emma", "New York", "Software Engineer");
-var fortune2 = tellFortune(3, "Alex", "London", "Teacher");
-var fortune3 = tellFortune(1, "Sophia", "Paris", "Chef");
-fortuneElement.innerHTML = fortune1 + "<br>" + fortune2 + "<br>" + fortune3;
+  
+  var fortune1 = tellFortune(2, "Emma", "New York", "Software Engineer");
+  var fortune2 = tellFortune(3, "Alex", "London", "Teacher");
+  var fortune3 = tellFortune(1, "Sophia", "Paris", "Chef");
 
+  fortuneElement.innerHTML = fortune1 + "<br>" + fortune2 + "<br>" + fortune3;
+}
 
   </script>
 </body>
