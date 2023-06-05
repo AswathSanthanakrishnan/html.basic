@@ -30,25 +30,22 @@
 <body>
   <h1>The Fortune Teller</h1>
   <div id="fortune"></div>
-  <button id="generateButton" onclick="generateFortune()">Generate Fortune</button>
+  <button id="generateButton">Generate Fortune</button>
 
   <script>
-    function tellFortune(numChildren, partnerName, location, jobTitle) {
-  var fortune = "You will be a " + jobTitle + " in " + location + ", and married to " + partnerName + " with " + numChildren + " kids.";
-  return fortune;
-}
+    var fortuneElement = document.getElementById("fortune");
+    var generateButton = document.getElementById("generateButton");
 
-function generateFortune() {
-  var fortuneElement = document.getElementById("fortune");
+    generateButton.addEventListener("click", function() {
+      var fortunes = [
+        "You will be a Software Engineer in New York, and married to Emma with 2 kids.",
+        "You will be a Teacher in London, and married to Alex with 3 kids.",
+        "You will be a Chef in Paris, and married to Sophia with 1 kid."
+      ];
 
-  
-  var fortune1 = tellFortune(2, "Emma", "New York", "Software Engineer");
-  var fortune2 = tellFortune(3, "Alex", "London", "Teacher");
-  var fortune3 = tellFortune(1, "Sophia", "Paris", "Chef");
-
-  fortuneElement.innerHTML = fortune1 + "<br>" + fortune2 + "<br>" + fortune3;
-}
-
+      var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+      fortuneElement.innerHTML = randomFortune;
+    });
   </script>
 </body>
 </html>
