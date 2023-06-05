@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Puppy Age Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+
+    #calculateButton {
+      padding: 10px 20px;
+      background-color: #73e2cd;
+      border: none;
+      color: #FFFFFF;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Puppy Age Calculator</h1>
+  <label for="age">Enter your puppy's age (in human years):</label>
+  <input type="number" id="age" required>
+  <br>
+
+  <button id="calculateButton">Calculate Dog Age</button>
+  <div id="result"></div>
+
+  <script>
+    var calculateButton = document.getElementById("calculateButton");
+    var resultElement = document.getElementById("result");
+
+    calculateButton.addEventListener("click", function()
+     {
+      var puppyAge = document.getElementById("age").value;
+      var conversionRate = 7;
+      var dogAge = puppyAge * conversionRate;
+      resultElement.innerHTML = "Your doggie is " + dogAge + " years old in dog years!";
+    });
+  </script>
+</body>
+</html>
