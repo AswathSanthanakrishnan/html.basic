@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us Extended</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .custom-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      font-size: small;
+    }
+
+    .custom-form-group {
+      margin-bottom: 15px;
+    }
+
+    .custom-form-group-label {
+      display: block;
+      font-weight: bold;
+      flex: 0 0 100px;
+    }
+
+    .custom-input {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .custom-textarea {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .custom-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #73e2cd;
+      border: none;
+      color: #FFFFFF;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .custom-btn-clear {
+      background-color: #42c75f;
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-container">
+    <form>
+      <h2>Contact Us Extended</h2>
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="firstName">First Name:</label>
+        <input class="custom-input" type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="lastName">Last Name:</label>
+        <input class="custom-input" type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="email">Email:</label>
+        <input class="custom-input" type="email" id="email" name="email" required>
+      </div>
+
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="Address">Address:</label>
+        <textarea class="custom-textarea" id="Address" name="Address" required></textarea>
+      </div>
+
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="City">City:</label>
+        <input class="custom-input" type="text" id="City" name="City" required>
+      </div>
+
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="ZIP / Postal Code">ZIP / Postal Code:</label>
+        <input class="custom-input" type="text" id="ZIP / Postal Code" name="ZIP / Postal Code" required>
+      </div>
+
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="State-Province">State / Province:</label>
+        <select class="custom-input" id="State-Province" name="State-Province">
+          <option value="apple">New York</option>
+          <option value="orange">Alaska</option>
+          <option value="grape">Hawaii</option>
+          <option value="grape">California</option>
+          <option value="grape">Massachusetts</option>
+
+        </select>
+      </div>
+
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="Country">Country:</label>
+        <select class="custom-input" id="Country" name="Country">
+          <option value="apple">USA</option>
+          <option value="orange">Portugal</option>
+          <option value="grape">Canada</option>
+          <option value="grape">France</option>
+          <option value="grape">Egypt</option>
+        </select>
+      </div>
+
+      <div class="custom-form-group">
+        <label class="custom-form-group-label" for="Comments-and-Questions">Comments and Questions:</label>
+        <textarea class="custom-textarea" id="Comments-and-Questions" name="Comments-and-Questions" required></textarea>
+      </div>
+
+      <div class="custom-form-group">
+        <button class="custom-btn custom-btn-clear" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
