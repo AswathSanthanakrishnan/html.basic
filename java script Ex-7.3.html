@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>vowelCount</title>
+</head>
+<body>
+  <h1>Vowel Count</h1>
+  <p id="result"></p>
+
+  <script>
+    function countVowel(str) {
+      var vowels = 'aeiouAEIOU';
+      var count = 0;
+
+      for (var i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+          count++;
+        }
+      }
+
+      return count;
+    }
+
+    var inputString = "Hello, World!";
+    var vowelCount = countVowel(inputString);
+
+    var resultElement = document.getElementById('result');
+    resultElement.textContent = "The vowel count is: " + vowelCount;
+  </script>
+</body>
+</html>
+
+
+
