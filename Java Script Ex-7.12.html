@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letter Count</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Letter Count</h1>
+  <label for="inputString">Enter a string:</label>
+  <input type="text" id="inputString">
+  <label for="letter">Enter a letter:</label>
+  <input type="text" id="letter">
+  <button onclick="count()">Count</button>
+  <p id="result"></p>
+
+  <script>
+    function count() {
+      var inputString = document.getElementById('inputString').value;
+      var letter = document.getElementById('letter').value;
+      var count = 0;
+
+      for (var i = 0; i < inputString.length; i++) {
+        if (inputString.charAt(i).toLowerCase() === letter.toLowerCase()) {
+          count++;
+        }
+      }
+
+      document.getElementById('result').textContent = "Count of '" + letter + "': " + count;
+    }
+  </script>
+</body>
+</html>
