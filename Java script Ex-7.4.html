@@ -3,21 +3,21 @@
   <head>
     <title>Flatten Array</title>
     <script>
-      function flattenArr(arr) {
-        return arr.reduce((result, currentArray) => result.concat(currentArray), []);
-      }
+      function flattenAndDisplay() {
+        var inputArray = document.getElementById('inputArray').value;
+        var parsedArray = eval(inputArray);
+        var flattenedArray = parsedArray.flat();
 
-      function displayFlattenedArray() {
-        var inputArray = [[1, 2], [3, 4], [5, 6]];
-        var flattenedArray = flattenArr(inputArray);
-        console.log(flattenedArray);
-        document.getElementById("result").innerHTML = flattenedArray.join(", ");
+        var resultElement = document.getElementById('result');
+        resultElement.textContent = "Flattened Array: " + flattenedArray;
       }
     </script>
   </head>
   <body>
     <h1>Flatten Array of Arrays</h1>
-    <button onclick="displayFlattenedArray()">Flatten</button>
+    <label for="inputArray">Enter a 2D array:</label>
+    <input type="text" id="inputArray" placeholder="Example: [[1, 2], [3, 4], [5, 6]]">
+    <button onclick="flattenAndDisplay()">Flatten</button>
     <p id="result"></p>
   </body>
 </html>
