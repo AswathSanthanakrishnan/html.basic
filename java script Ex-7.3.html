@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>vowelCount</title>
+  <title>Vowel Count</title>
 </head>
 <body>
   <h1>Vowel Count</h1>
+  <label for="inputString">Enter a string:</label>
+  <input type="text" id="inputString" placeholder="Example: Hello, World!">
+  <button onclick="countAndDisplayVowels()">Count Vowels</button>
   <p id="result"></p>
 
   <script>
@@ -21,14 +24,13 @@
       return count;
     }
 
-    var inputString = "Hello, World!";
-    var vowelCount = countVowel(inputString);
+    function countAndDisplayVowels() {
+      var inputString = document.getElementById('inputString').value;
+      var vowelCount = countVowel(inputString);
 
-    var resultElement = document.getElementById('result');
-    resultElement.textContent = "The vowel count is: " + vowelCount;
+      var resultElement = document.getElementById('result');
+      resultElement.textContent = "The vowel count is: " + vowelCount;
+    }
   </script>
 </body>
 </html>
-
-
-
