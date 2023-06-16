@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>flattenArray</title>
-</head>
-<body>
-  <script>
-    function flattenArr(arr) {
-      return arr.reduce(function (result, currentArray) {
-        return result.concat(currentArray);
-      }, []);
-    }
+  <head>
+    <title>Flatten Array</title>
+    <script>
+      function flattenArr(arr) {
+        return arr.reduce((result, currentArray) => result.concat(currentArray), []);
+      }
 
-    var inputArray = [[1, 2], [3, 4], [5, 6]];
-    var flattenedArray = flattenArr(inputArray);
-    console.log(flattenedArray);
-  </script>
-</body>
+      function displayFlattenedArray() {
+        var inputArray = [[1, 2], [3, 4], [5, 6]];
+        var flattenedArray = flattenArr(inputArray);
+        console.log(flattenedArray);
+        document.getElementById("result").innerHTML = flattenedArray.join(", ");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Flatten Array of Arrays</h1>
+    <button onclick="displayFlattenedArray()">Flatten</button>
+    <p id="result"></p>
+  </body>
 </html>
+
